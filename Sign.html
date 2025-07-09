@@ -1,0 +1,186 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Amazon fashion</title>
+
+<style>
+
+body{background-color: rgb(243, 239, 235);  }
+
+header {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    height: 100px;
+}
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.male{
+  background-color:white  ;
+  color: rgb(108, 117, 125);
+    height: 60px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  border-color:rgb(108, 117, 125) ;
+  border-radius: 5px;
+  margin-left: 15px;
+   margin-right: 15px;
+  border-style: solid;
+  cursor: pointer;
+ }
+
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+     height: 30px;
+}
+
+.add{
+  background-color: rgb(255, 216, 20);
+  height: 30px;
+  width: 120px;
+  border: 0 ;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.buy{
+ background-color: rgb(255, 164, 28);
+  height: 30px;
+  width: 120px;
+  border: 0 ;
+  border-radius: 20px;
+  cursor:pointer ;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.Search{
+height: 50px;
+color: black;
+font-size: 14px;
+font-weight: bold;
+}
+
+.h1{
+color:#005f73;
+}
+
+.name{
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<header>
+  <img src="C:\Users\usits\Desktop\SKILL\Website2\imgs\Thumbnail5._SX720_QL85_.jpg" align="left" height="100" width="150" > 
+    <P align="right" >
+            <input type="search" class="Search" size="25" placeholder="&#x1f50d;    Search Here">
+    <button style="  background-color:rgb(233, 130, 12)  ;  color: rgb(219, 217, 213);   height: 50px;   width: 40px;   font-size: 16px;   font-weight: bold;   border-color:rgb(108, 117, 125) ; border-radius: 5px;  border-style: solid; cursor: pointer;" >Go</button>
+    <button class="male" ><a href="C:\Users\usits\Desktop\SKILL\Website2\Male.html" style="text-decoration: none;" >  Male </a></button>
+    <button class="male"><a href="C:\Users\usits\Desktop\SKILL\Website2\female.html" style="text-decoration: none;">Female</a></button>
+    <button class="male"><a href="C:\Users\usits\Desktop\SKILL\Website2\Ft.html" style="text-decoration: none;">Footwear</a></button>
+    <button class="male"><a href="C:\Users\usits\Desktop\SKILL\Website2\Wt.html" style="text-decoration: none;">Watches</a></button>
+    <button class="male"><a href="C:\Users\usits\Desktop\SKILL\Website2\Sign.html" style="text-decoration: none;">Sign in</a></button>
+    </P>
+</header>
+<br>
+<br>
+
+<h1 align="center" class="h1" >Amazon SignIn</h1>
+
+<table align="center" border="0" height="700" width="500" bgcolor="white"  >
+  <tr>
+    <td>
+      <p align="center"><img src="https://mms.businesswire.com/media/20180417005209/en/3799/23/logo_white_.jpg" height="120" width="250"></p>
+      <h3 align="center">Create a new account</h3>
+      <p align="center">It's quick and easy.</p>
+      <form align="center" method="post" name="google-sheet" action="C:\Users\usits\Desktop\SKILL\Website2\Male.html">
+        <input type="text" class="name" placeholder="First Name" name="First name" required ><input type="text" class="name" placeholder="Last Name" name="Last name" required >
+   
+        <p>Date of Birth  <input type="date" class="name" name="dob" ></p>
+        <p>Gender : <input type="radio" name="gen" name="Gender" >Male
+        <input type="radio" name="gen" name="Gender">Female </p>
+               <input type="email" class="name" placeholder="Email ID" name="Email ID" size="30px"></p>
+       <input type="tel" class="name" placeholder="Number" size="30px" maxlength="10" name="Mobile" ></p>
+
+
+
+<br>
+
+<br>
+<input type="submit" class="buy" value="Submit" name="submit">
+
+
+      </form>
+
+
+
+
+
+    </td>
+  </tr>
+
+
+
+
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+
+ <p> &copy; 2025 Created by Durga Prasad Tadisetty All rights reserved.</p>
+</footer>
+
+
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyzRgudf05yMB3f0U11y_i5kji87VIrA73nZa1yg2tift1BFQ89sUbQZ2gbxPITPeRkBg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
